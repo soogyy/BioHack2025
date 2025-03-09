@@ -152,7 +152,7 @@ st.title("Counterfeit Medicine Finder: Drug Composition Comparison Tool")
 ### MAIN CODE:
 # Input fields for drug composition
 drug_name = st.text_input('Please enter the name of the medication you\'d like to validate: (Capitalize only the first letter)')
-active_ingredient = st.text_input('What is the listed active ingredient on this medication? ')
+active_ingredient = st.text_input('What is the listed active ingredient on this medication? (Keep all letters lower case)')
 molecular_formula = st.text_input('What is the listed molecular formula for the chemical composition of the active ingredient? Please capitalize the first letter of each element symbol. ')
 molecular_weight = st.number_input('What is the listed molecular weight of this active ingredient in grams/mole? ')
 
