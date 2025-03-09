@@ -223,5 +223,7 @@ with st.expander(f'Are you a healthcare professional? Enter details about a new 
 
 # comparing counterfeit data set to verified data set
 ctft_results = compare_counterfeit_dataset(ctft_data, verified_data)
+st.write("Example output table for counterfeit data compared to verified data set")
+
 st.write(ctft_results)
 print(ctft_results)
