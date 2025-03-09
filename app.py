@@ -8,10 +8,9 @@ st.title("🧬 DNA Sequence Alignment and Cancer Risk Assesment 🧬")
 DNA_sequence_1 = st.text_area("Please enter your DNA sequence: ")
 
 uploaded_file = st.file_uploader("Upload cancer genes database (Excel file)", type=["xlsx"])
-if uploaded_file:
+
+if uploaded_file is not None:
     database = pd.read_excel(uploaded_file)
-else:
-    database = pd.read_excel("/Users/m._.nguyen/Documents/code/BioHack 2025/cancer genes.xlsx")
 
 DNA_chars = set("AaCcGgTt")
 RNA_chars = set("AaCcGgUu")
