@@ -7,10 +7,7 @@ st.title("🧬 DNA Sequence Alignment and Cancer Risk Assesment 🧬")
 
 DNA_sequence_1 = st.text_area("Please enter your DNA sequence: ")
 
-uploaded_file = st.file_uploader("Upload cancer genes database (Excel file)", type=["xlsx"])
-
-if uploaded_file is not None:
-    database = pd.read_excel(uploaded_file)
+database = pd.read_csv(cancer_genes.csv)
 
 DNA_chars = set("AaCcGgTt")
 RNA_chars = set("AaCcGgUu")
@@ -88,3 +85,4 @@ if best_match_percentage >= 90:
         st.success(f"✅ You have little to no risk of developing **{best_condition}**")
 else:
     st.error("No match found in database :(")
+    
